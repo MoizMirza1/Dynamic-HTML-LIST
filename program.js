@@ -1,19 +1,23 @@
-const parent = document.getElementById("container")
+// Get the parent container element from the HTML using its id
+const parent = document.getElementById("container");
 
-const ul = document.createElement("ul")
+// Create a new unordered list element
+const ul = document.createElement("ul");
 
-const list = ["Honda" , "Toyota" , "Ford" , "BMW" , "Mercedes"]
+// Define the list of car brands
+const list = ["Honda", "Toyota", "Ford", "BMW", "Mercedes"];
 
+// Iterate over each item in the list
+list.forEach(item => {
+    // Create a new list item element
+    const li = document.createElement("li");
 
-list.forEach(item =>{
-    const li = document.createElement("li")
-    li.innerText = item
+    // Set the text content of the list item to the current car brand
+    li.innerText = item;
 
-    // append
+    // Append the list item to the unordered list
+    ul.appendChild(li);
+});
 
-    ul.appendChild(li)
-})
-
-    // append 
-
-    parent.appendChild(ul)
+// Append the unordered list to the parent container
+parent.appendChild(ul);
